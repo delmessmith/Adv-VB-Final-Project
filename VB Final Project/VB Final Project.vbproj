@@ -71,11 +71,41 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAbout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="frmGasTrackerNewEntry.Designer.vb">
+      <DependentUpon>frmGasTrackerNewEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGasTrackerNewEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGasTrackerViewAll.Designer.vb">
+      <DependentUpon>frmGasTrackerViewAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGasTrackerViewAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMileageTrackerNewEntry.Designer.vb">
+      <DependentUpon>frmMileageTrackerNewEntry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMileageTrackerNewEntry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMileageTrackerViewAll.Designer.vb">
+      <DependentUpon>frmMileageTrackerViewAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMileageTrackerViewAll.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -95,6 +125,24 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGasTrackerNewEntry.resx">
+      <DependentUpon>frmGasTrackerNewEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGasTrackerViewAll.resx">
+      <DependentUpon>frmGasTrackerViewAll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMileageTrackerNewEntry.resx">
+      <DependentUpon>frmMileageTrackerNewEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMileageTrackerViewAll.resx">
+      <DependentUpon>frmMileageTrackerViewAll.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

@@ -1,1 +1,16 @@
 C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\bin\Debug\VB Final Project.exe.config
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\bin\Debug\VB Final Project.exe
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\bin\Debug\VB Final Project.pdb
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\bin\Debug\VB Final Project.xml
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB Final Project.vbprojResolveAssemblyReference.cache
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmMain.resources
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.Resources.resources
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB Final Project.vbproj.GenerateResource.Cache
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB Final Project.exe
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB Final Project.xml
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB Final Project.pdb
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmGasTrackerNewEntry.resources
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmGasTrackerViewAll.resources
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmMileageTrackerNewEntry.resources
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmMileageTrackerViewAll.resources
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmAbout.resources
