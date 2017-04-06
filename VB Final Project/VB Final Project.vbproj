@@ -77,6 +77,12 @@
     <Compile Include="frmAbout.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmGasReport.Designer.vb">
+      <DependentUpon>frmGasReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGasReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmGasTrackerNewEntry.Designer.vb">
       <DependentUpon>frmGasTrackerNewEntry.vb</DependentUpon>
     </Compile>
@@ -108,6 +114,12 @@
     <Compile Include="frmMileageTrackerViewAll.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMileageReport.Designer.vb">
+      <DependentUpon>frmMileageReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMileageReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -128,6 +140,9 @@
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGasReport.resx">
+      <DependentUpon>frmGasReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGasTrackerNewEntry.resx">
       <DependentUpon>frmGasTrackerNewEntry.vb</DependentUpon>
     </EmbeddedResource>
@@ -136,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMileageReport.resx">
+      <DependentUpon>frmMileageReport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMileageTrackerNewEntry.resx">
       <DependentUpon>frmMileageTrackerNewEntry.vb</DependentUpon>

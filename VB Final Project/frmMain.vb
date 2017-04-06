@@ -22,4 +22,12 @@
     Private Sub mnuHelpAbout_Click(sender As Object, e As EventArgs) Handles mnuHelpAbout.Click
         frmAbout.ShowDialog()
     End Sub
+
+    Private Sub GenerateReportToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles GenerateReportToolStripMenuItem1.Click
+        frmMileageReport.ShowDialog()
+    End Sub
+
+    Private Sub GenerateReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GenerateReportToolStripMenuItem.Click
+        frmGasReport.ShowDialog()
+    End Sub
 End Class

@@ -14,3 +14,5 @@ C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final P
 C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmMileageTrackerNewEntry.resources
 C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmMileageTrackerViewAll.resources
 C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmAbout.resources
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmMileageReport.resources
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmGasReport.resources

@@ -28,13 +28,15 @@ Partial Class frmMain
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFileClose = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuGasTracker = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuMileTracker = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuHelpAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuGasTrackerAddNew = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuGasTrackerViewAll = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuMileTracker = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuMileTrackerAddNew = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuMileTrackerViewAll = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuHelp = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuHelpAbout = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GenerateReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GenerateReportToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -76,22 +78,46 @@ Partial Class frmMain
         'mnuFileClose
         '
         Me.mnuFileClose.Name = "mnuFileClose"
-        Me.mnuFileClose.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFileClose.Size = New System.Drawing.Size(103, 22)
         Me.mnuFileClose.Text = "Close"
         '
         'mnuGasTracker
         '
-        Me.mnuGasTracker.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuGasTrackerAddNew, Me.mnuGasTrackerViewAll})
+        Me.mnuGasTracker.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuGasTrackerAddNew, Me.mnuGasTrackerViewAll, Me.GenerateReportToolStripMenuItem})
         Me.mnuGasTracker.Name = "mnuGasTracker"
         Me.mnuGasTracker.Size = New System.Drawing.Size(79, 20)
         Me.mnuGasTracker.Text = "Gas Tracker"
         '
+        'mnuGasTrackerAddNew
+        '
+        Me.mnuGasTrackerAddNew.Name = "mnuGasTrackerAddNew"
+        Me.mnuGasTrackerAddNew.Size = New System.Drawing.Size(159, 22)
+        Me.mnuGasTrackerAddNew.Text = "Add New Entry"
+        '
+        'mnuGasTrackerViewAll
+        '
+        Me.mnuGasTrackerViewAll.Name = "mnuGasTrackerViewAll"
+        Me.mnuGasTrackerViewAll.Size = New System.Drawing.Size(159, 22)
+        Me.mnuGasTrackerViewAll.Text = "View All"
+        '
         'mnuMileTracker
         '
-        Me.mnuMileTracker.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuMileTrackerAddNew, Me.mnuMileTrackerViewAll})
+        Me.mnuMileTracker.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuMileTrackerAddNew, Me.mnuMileTrackerViewAll, Me.GenerateReportToolStripMenuItem1})
         Me.mnuMileTracker.Name = "mnuMileTracker"
         Me.mnuMileTracker.Size = New System.Drawing.Size(102, 20)
         Me.mnuMileTracker.Text = "Mileage Tracker"
+        '
+        'mnuMileTrackerAddNew
+        '
+        Me.mnuMileTrackerAddNew.Name = "mnuMileTrackerAddNew"
+        Me.mnuMileTrackerAddNew.Size = New System.Drawing.Size(159, 22)
+        Me.mnuMileTrackerAddNew.Text = "Add New Entry"
+        '
+        'mnuMileTrackerViewAll
+        '
+        Me.mnuMileTrackerViewAll.Name = "mnuMileTrackerViewAll"
+        Me.mnuMileTrackerViewAll.Size = New System.Drawing.Size(159, 22)
+        Me.mnuMileTrackerViewAll.Text = "View All"
         '
         'mnuHelp
         '
@@ -103,32 +129,20 @@ Partial Class frmMain
         'mnuHelpAbout
         '
         Me.mnuHelpAbout.Name = "mnuHelpAbout"
-        Me.mnuHelpAbout.Size = New System.Drawing.Size(152, 22)
+        Me.mnuHelpAbout.Size = New System.Drawing.Size(107, 22)
         Me.mnuHelpAbout.Text = "About"
         '
-        'mnuGasTrackerAddNew
+        'GenerateReportToolStripMenuItem
         '
-        Me.mnuGasTrackerAddNew.Name = "mnuGasTrackerAddNew"
-        Me.mnuGasTrackerAddNew.Size = New System.Drawing.Size(153, 22)
-        Me.mnuGasTrackerAddNew.Text = "Add New Entry"
+        Me.GenerateReportToolStripMenuItem.Name = "GenerateReportToolStripMenuItem"
+        Me.GenerateReportToolStripMenuItem.Size = New System.Drawing.Size(159, 22)
+        Me.GenerateReportToolStripMenuItem.Text = "Generate Report"
         '
-        'mnuGasTrackerViewAll
+        'GenerateReportToolStripMenuItem1
         '
-        Me.mnuGasTrackerViewAll.Name = "mnuGasTrackerViewAll"
-        Me.mnuGasTrackerViewAll.Size = New System.Drawing.Size(153, 22)
-        Me.mnuGasTrackerViewAll.Text = "View All"
-        '
-        'mnuMileTrackerAddNew
-        '
-        Me.mnuMileTrackerAddNew.Name = "mnuMileTrackerAddNew"
-        Me.mnuMileTrackerAddNew.Size = New System.Drawing.Size(153, 22)
-        Me.mnuMileTrackerAddNew.Text = "Add New Entry"
-        '
-        'mnuMileTrackerViewAll
-        '
-        Me.mnuMileTrackerViewAll.Name = "mnuMileTrackerViewAll"
-        Me.mnuMileTrackerViewAll.Size = New System.Drawing.Size(153, 22)
-        Me.mnuMileTrackerViewAll.Text = "View All"
+        Me.GenerateReportToolStripMenuItem1.Name = "GenerateReportToolStripMenuItem1"
+        Me.GenerateReportToolStripMenuItem1.Size = New System.Drawing.Size(159, 22)
+        Me.GenerateReportToolStripMenuItem1.Text = "Generate Report"
         '
         'frmMain
         '
@@ -161,4 +175,6 @@ Partial Class frmMain
     Friend WithEvents mnuMileTrackerViewAll As ToolStripMenuItem
     Friend WithEvents mnuHelp As ToolStripMenuItem
     Friend WithEvents mnuHelpAbout As ToolStripMenuItem
+    Friend WithEvents GenerateReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GenerateReportToolStripMenuItem1 As ToolStripMenuItem
 End Class
