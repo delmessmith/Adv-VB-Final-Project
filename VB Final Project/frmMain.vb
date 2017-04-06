@@ -30,4 +30,12 @@
     Private Sub GenerateReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GenerateReportToolStripMenuItem.Click
         frmGasReport.ShowDialog()
     End Sub
+
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        frmUsername.ShowDialog()
+
+        If Username = "" Then
+            Me.Close()
+        End If
+    End Sub
 End Class
