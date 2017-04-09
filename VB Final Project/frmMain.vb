@@ -23,12 +23,12 @@
         frmAbout.ShowDialog()
     End Sub
 
-    Private Sub GenerateReportToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles GenerateReportToolStripMenuItem1.Click
-        frmMileageReport.ShowDialog()
-    End Sub
-
-    Private Sub GenerateReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GenerateReportToolStripMenuItem.Click
-        frmGasReport.ShowDialog()
+    Private Sub GenerateReportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles mnuGasTrackerGenerateReport.Click
+        If Username = "admin" Then
+            frmGasReport.ShowDialog()
+        Else
+            MessageBox.Show("You do not have the proper permissions to open this report.")
+        End If
     End Sub
 
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -36,6 +36,14 @@
 
         If Username = "" Then
             Me.Close()
+        End If
+    End Sub
+
+    Private Sub mnuMileTrackerGenerateReport_Click(sender As Object, e As EventArgs) Handles mnuMileTrackerGenerateReport.Click
+        If Username = "admin" Then
+            frmMileageReport.ShowDialog()
+        Else
+            MessageBox.Show("You do not have the proper permissions to open this report.")
         End If
     End Sub
 End Class
