@@ -79,6 +79,7 @@ Partial Class frmMileageTrackerNewEntry
         '
         'cboEmployee
         '
+        Me.cboEmployee.Enabled = False
         Me.cboEmployee.FormattingEnabled = True
         Me.cboEmployee.Location = New System.Drawing.Point(126, 21)
         Me.cboEmployee.Name = "cboEmployee"

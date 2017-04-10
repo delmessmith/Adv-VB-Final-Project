@@ -12,10 +12,14 @@
         'Housekeeping to clear any values
         txtBeginOdometer.Text = ""
         txtEndOdometer.Text = ""
-        cboEmployee.Text = ""
+        cboEmployee.Text = Username
         cboVehicle.Text = ""
         chkGasPurchase.Checked = False
         dtpDate.Text = Today
 
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
     End Sub
 End Class

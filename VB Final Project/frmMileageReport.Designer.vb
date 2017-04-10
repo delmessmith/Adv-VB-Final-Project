@@ -28,6 +28,7 @@ Partial Class frmMileageReport
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnRun = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.sfdSave = New System.Windows.Forms.SaveFileDialog()
         Me.SuspendLayout()
         '
         'dtpBegin
@@ -108,4 +109,5 @@ Partial Class frmMileageReport
     Friend WithEvents Label2 As Label
     Friend WithEvents btnRun As Button
     Friend WithEvents btnCancel As Button
+    Friend WithEvents sfdSave As SaveFileDialog
 End Class
