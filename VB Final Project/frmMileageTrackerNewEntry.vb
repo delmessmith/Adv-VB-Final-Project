@@ -1,5 +1,16 @@
-﻿Public Class frmMileageTrackerNewEntry
+﻿
+Public Class frmMileageTrackerNewEntry
+    Private mMilesEntry As New MileageEntry
+
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        Dim entryID As Integer = CInt(Now.Date)
+        Dim entryDate As Date = CDate(dtpDate.Value)
+        If mMilesEntry.Insert() Then
+            Me.Close()
+        Else
+            lblStatus.Text = "Cannot Add Appointment. " & Appointments.LastError
+        End If
+
         If chkGasPurchase.Checked Then
             frmGasTrackerNewEntry.ShowDialog()
         End If
