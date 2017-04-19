@@ -22,15 +22,27 @@ Partial Class frmMileageTrackerViewAll
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFileClose = New System.Windows.Forms.ToolStripMenuItem()
         Me.dgvMilesDriven = New System.Windows.Forms.DataGridView()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.GasPurchasesDataSet = New VB_Final_Project.GasPurchasesDataSet()
+        Me.MilesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MilesTableAdapter = New VB_Final_Project.GasPurchasesDataSetTableAdapters.MilesTableAdapter()
+        Me.EmployeeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.VehicleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BeginOdometerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.EndOdometerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MilesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvMilesDriven, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
+        CType(Me.GasPurchasesDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MilesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -57,7 +69,10 @@ Partial Class frmMileageTrackerViewAll
         '
         'dgvMilesDriven
         '
+        Me.dgvMilesDriven.AutoGenerateColumns = False
         Me.dgvMilesDriven.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvMilesDriven.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmployeeDataGridViewTextBoxColumn, Me.VehicleDataGridViewTextBoxColumn, Me.DateDataGridViewTextBoxColumn, Me.BeginOdometerDataGridViewTextBoxColumn, Me.EndOdometerDataGridViewTextBoxColumn, Me.MilesDataGridViewTextBoxColumn})
+        Me.dgvMilesDriven.DataSource = Me.MilesBindingSource
         Me.dgvMilesDriven.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvMilesDriven.Location = New System.Drawing.Point(0, 24)
         Me.dgvMilesDriven.Name = "dgvMilesDriven"
@@ -78,6 +93,56 @@ Partial Class frmMileageTrackerViewAll
         Me.lblStatus.Name = "lblStatus"
         Me.lblStatus.Size = New System.Drawing.Size(0, 17)
         '
+        'GasPurchasesDataSet
+        '
+        Me.GasPurchasesDataSet.DataSetName = "GasPurchasesDataSet"
+        Me.GasPurchasesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MilesBindingSource
+        '
+        Me.MilesBindingSource.DataMember = "Miles"
+        Me.MilesBindingSource.DataSource = Me.GasPurchasesDataSet
+        '
+        'MilesTableAdapter
+        '
+        Me.MilesTableAdapter.ClearBeforeFill = True
+        '
+        'EmployeeDataGridViewTextBoxColumn
+        '
+        Me.EmployeeDataGridViewTextBoxColumn.DataPropertyName = "Employee"
+        Me.EmployeeDataGridViewTextBoxColumn.HeaderText = "Employee"
+        Me.EmployeeDataGridViewTextBoxColumn.Name = "EmployeeDataGridViewTextBoxColumn"
+        '
+        'VehicleDataGridViewTextBoxColumn
+        '
+        Me.VehicleDataGridViewTextBoxColumn.DataPropertyName = "Vehicle"
+        Me.VehicleDataGridViewTextBoxColumn.HeaderText = "Vehicle"
+        Me.VehicleDataGridViewTextBoxColumn.Name = "VehicleDataGridViewTextBoxColumn"
+        '
+        'DateDataGridViewTextBoxColumn
+        '
+        Me.DateDataGridViewTextBoxColumn.DataPropertyName = "Date"
+        Me.DateDataGridViewTextBoxColumn.HeaderText = "Date"
+        Me.DateDataGridViewTextBoxColumn.Name = "DateDataGridViewTextBoxColumn"
+        '
+        'BeginOdometerDataGridViewTextBoxColumn
+        '
+        Me.BeginOdometerDataGridViewTextBoxColumn.DataPropertyName = "BeginOdometer"
+        Me.BeginOdometerDataGridViewTextBoxColumn.HeaderText = "Begin Odometer"
+        Me.BeginOdometerDataGridViewTextBoxColumn.Name = "BeginOdometerDataGridViewTextBoxColumn"
+        '
+        'EndOdometerDataGridViewTextBoxColumn
+        '
+        Me.EndOdometerDataGridViewTextBoxColumn.DataPropertyName = "EndOdometer"
+        Me.EndOdometerDataGridViewTextBoxColumn.HeaderText = "End Odometer"
+        Me.EndOdometerDataGridViewTextBoxColumn.Name = "EndOdometerDataGridViewTextBoxColumn"
+        '
+        'MilesDataGridViewTextBoxColumn
+        '
+        Me.MilesDataGridViewTextBoxColumn.DataPropertyName = "Miles"
+        Me.MilesDataGridViewTextBoxColumn.HeaderText = "Miles"
+        Me.MilesDataGridViewTextBoxColumn.Name = "MilesDataGridViewTextBoxColumn"
+        '
         'frmMileageTrackerViewAll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -93,6 +158,8 @@ Partial Class frmMileageTrackerViewAll
         CType(Me.dgvMilesDriven, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.GasPurchasesDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MilesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -104,4 +171,13 @@ Partial Class frmMileageTrackerViewAll
     Friend WithEvents dgvMilesDriven As DataGridView
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents lblStatus As ToolStripStatusLabel
+    Friend WithEvents GasPurchasesDataSet As GasPurchasesDataSet
+    Friend WithEvents MilesBindingSource As BindingSource
+    Friend WithEvents MilesTableAdapter As GasPurchasesDataSetTableAdapters.MilesTableAdapter
+    Friend WithEvents EmployeeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents VehicleDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents DateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents BeginOdometerDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents EndOdometerDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
+    Friend WithEvents MilesDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
 End Class

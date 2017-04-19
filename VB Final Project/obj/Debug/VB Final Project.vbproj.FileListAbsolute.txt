@@ -17,3 +17,5 @@ C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final P
 C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmMileageReport.resources
 C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmGasReport.resources
 C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\obj\Debug\VB_Final_Project.frmUsername.resources
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\bin\Debug\VehicleGasAndMiles.mdf
+C:\Users\Del\Desktop\VB\Advanced VB\Projects and Assignments\Projects\VB Final Project\VB Final Project\bin\Debug\VehicleGasAndMiles_log.ldf

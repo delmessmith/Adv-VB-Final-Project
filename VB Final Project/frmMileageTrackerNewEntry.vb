@@ -3,12 +3,17 @@ Public Class frmMileageTrackerNewEntry
     Private mMilesEntry As New MileageEntry
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim entryID As Integer = CInt(Now.Date)
+        Dim employee As String = Username
+        Dim vehicle As String = cboVehicle.Text
         Dim entryDate As Date = CDate(dtpDate.Value)
-        If mMilesEntry.Insert() Then
+        Dim beginOdom As Integer = CInt(txtBeginOdometer.Text)
+        Dim endOdom As Integer = CInt(txtEndOdometer.Text)
+        Dim miles As Integer = endOdom - beginOdom
+
+        If mMilesEntry.Insert(employee, vehicle, entryDate, beginOdom, endOdom, miles) Then
             Me.Close()
         Else
-            lblStatus.Text = "Cannot Add Appointment. " & Appointments.LastError
+            MessageBox.Show("Cannot Add Appointment. " & MileageEntry.LastError)
         End If
 
         If chkGasPurchase.Checked Then
