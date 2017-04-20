@@ -1886,29 +1886,19 @@ Namespace GasPurchasesDataSetTableAdapters
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Miles", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Miles", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._adapter.UpdateCommand = New Global.System.Data.SqlClient.SqlCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Miles] SET [Employee] = @Employee, [Vehicle] = @Vehicle, [Date] = @"& _ 
-                "Date, [BeginOdometer] = @BeginOdometer, [EndOdometer] = @EndOdometer, [Miles] = "& _ 
-                "@Miles WHERE (([MilesEntryId] = @Original_MilesEntryId) AND ([Employee] = @Origi"& _ 
-                "nal_Employee) AND ([Vehicle] = @Original_Vehicle) AND ([Date] = @Original_Date) "& _ 
-                "AND ([BeginOdometer] = @Original_BeginOdometer) AND ([EndOdometer] = @Original_E"& _ 
-                "ndOdometer) AND ([Miles] = @Original_Miles));"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MilesEntryId, Employee, Ve"& _ 
-                "hicle, Date, BeginOdometer, EndOdometer, Miles FROM Miles WHERE (MilesEntryId = "& _ 
-                "@MilesEntryId)"
+            Me._adapter.UpdateCommand.CommandText = "UPDATE       Miles"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET                Employee = @Employee, Vehicle = @Vehicle, "& _ 
+                "Date = @Date, BeginOdometer = @BeginOdometer, EndOdometer = @EndOdometer, Miles "& _ 
+                "= @Miles"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE        (MilesEntryId = @MilesEntryId);   "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SELECT MilesEntryId, "& _ 
+                "Employee, Vehicle, Date, BeginOdometer, EndOdometer, Miles FROM Miles WHERE (Mil"& _ 
+                "esEntryId = @MilesEntryId)"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Employee", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Employee", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Vehicle", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Vehicle", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Date", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Date", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BeginOdometer", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BeginOdometer", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EndOdometer", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EndOdometer", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Miles", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Miles", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_MilesEntryId", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "MilesEntryId", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Employee", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Employee", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Vehicle", Global.System.Data.SqlDbType.NVarChar, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Vehicle", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Date", Global.System.Data.SqlDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Date", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_BeginOdometer", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "BeginOdometer", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_EndOdometer", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "EndOdometer", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Original_Miles", Global.System.Data.SqlDbType.Int, 0, Global.System.Data.ParameterDirection.Input, 0, 0, "Miles", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MilesEntryId", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "MilesEntryId", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Employee", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Employee", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Vehicle", Global.System.Data.SqlDbType.NVarChar, 50, Global.System.Data.ParameterDirection.Input, 0, 0, "Vehicle", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Date", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 0, 0, "Date", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@BeginOdometer", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "BeginOdometer", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@EndOdometer", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "EndOdometer", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Miles", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "Miles", Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@MilesEntryId", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.Input, 0, 0, "MilesEntryId", Global.System.Data.DataRowVersion.Original, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2054,7 +2044,7 @@ Namespace GasPurchasesDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Employee As String, ByVal Vehicle As String, ByVal _Date As Date, ByVal BeginOdometer As Integer, ByVal EndOdometer As Integer, ByVal Miles As Integer, ByVal Original_MilesEntryId As Integer, ByVal Original_Employee As String, ByVal Original_Vehicle As String, ByVal Original_Date As Date, ByVal Original_BeginOdometer As Integer, ByVal Original_EndOdometer As Integer, ByVal Original_Miles As Integer, ByVal MilesEntryId As Integer) As Integer
+        Public Overloads Overridable Function Update(ByVal Employee As String, ByVal Vehicle As String, ByVal _Date As String, ByVal BeginOdometer As Integer, ByVal EndOdometer As Integer, ByVal Miles As Integer, ByVal MilesEntryId As Integer) As Integer
             If (Employee Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Employee")
             Else
@@ -2065,26 +2055,15 @@ Namespace GasPurchasesDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Vehicle,String)
             End If
-            Me.Adapter.UpdateCommand.Parameters(2).Value = CType(_Date,Date)
+            If (_Date Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("_Date")
+            Else
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(_Date,String)
+            End If
             Me.Adapter.UpdateCommand.Parameters(3).Value = CType(BeginOdometer,Integer)
             Me.Adapter.UpdateCommand.Parameters(4).Value = CType(EndOdometer,Integer)
             Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Miles,Integer)
-            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_MilesEntryId,Integer)
-            If (Original_Employee Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Employee")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Employee,String)
-            End If
-            If (Original_Vehicle Is Nothing) Then
-                Throw New Global.System.ArgumentNullException("Original_Vehicle")
-            Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Vehicle,String)
-            End If
-            Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Date,Date)
-            Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_BeginOdometer,Integer)
-            Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_EndOdometer,Integer)
-            Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Miles,Integer)
-            Me.Adapter.UpdateCommand.Parameters(13).Value = CType(MilesEntryId,Integer)
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(MilesEntryId,Integer)
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -2098,14 +2077,6 @@ Namespace GasPurchasesDataSetTableAdapters
                     Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
-        End Function
-        
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Employee As String, ByVal Vehicle As String, ByVal _Date As Date, ByVal BeginOdometer As Integer, ByVal EndOdometer As Integer, ByVal Miles As Integer, ByVal Original_MilesEntryId As Integer, ByVal Original_Employee As String, ByVal Original_Vehicle As String, ByVal Original_Date As Date, ByVal Original_BeginOdometer As Integer, ByVal Original_EndOdometer As Integer, ByVal Original_Miles As Integer) As Integer
-            Return Me.Update(Employee, Vehicle, _Date, BeginOdometer, EndOdometer, Miles, Original_MilesEntryId, Original_Employee, Original_Vehicle, Original_Date, Original_BeginOdometer, Original_EndOdometer, Original_Miles, Original_MilesEntryId)
         End Function
     End Class
     

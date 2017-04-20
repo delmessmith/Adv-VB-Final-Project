@@ -22,4 +22,16 @@
         End Get
     End Property
 
+    Public Function Update(ByVal employee As String, ByVal vehicle As String, ByVal entryDate As Date, ByVal BeginOdometer As Integer,
+                           ByVal endOdometer As Integer, ByVal miles As Integer, ByVal entryID As Integer) As Boolean
+        LastError = String.Empty
+        Try
+            adapter.Update(employee, vehicle, entryDate, BeginOdometer, endOdometer, miles, entryID)
+            Return True
+        Catch ex As Exception
+            LastError = ex.Message
+            Return False
+        End Try
+    End Function
+
 End Class

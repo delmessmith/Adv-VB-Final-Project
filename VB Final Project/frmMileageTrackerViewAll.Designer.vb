@@ -50,7 +50,7 @@ Partial Class frmMileageTrackerViewAll
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(594, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(642, 24)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -76,7 +76,7 @@ Partial Class frmMileageTrackerViewAll
         Me.dgvMilesDriven.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvMilesDriven.Location = New System.Drawing.Point(0, 24)
         Me.dgvMilesDriven.Name = "dgvMilesDriven"
-        Me.dgvMilesDriven.Size = New System.Drawing.Size(594, 262)
+        Me.dgvMilesDriven.Size = New System.Drawing.Size(642, 262)
         Me.dgvMilesDriven.TabIndex = 3
         '
         'StatusStrip1
@@ -84,7 +84,7 @@ Partial Class frmMileageTrackerViewAll
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStatus})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 264)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(594, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(642, 22)
         Me.StatusStrip1.TabIndex = 4
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -147,7 +147,7 @@ Partial Class frmMileageTrackerViewAll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(594, 286)
+        Me.ClientSize = New System.Drawing.Size(642, 286)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.dgvMilesDriven)
         Me.Controls.Add(Me.MenuStrip1)
