@@ -33,5 +33,9 @@
             Return False
         End Try
     End Function
-
+    Public Function GetByDate(ByVal beginDate As Date, ByVal endDate As Date) As DataTable
+        Dim table As DataTable = adapter.GetData
+        table.DefaultView.RowFilter = "Date > #" & beginDate & "# and Date < #" & endDate & "#"
+        Return table
+    End Function
 End Class
