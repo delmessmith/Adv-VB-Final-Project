@@ -38,4 +38,16 @@ Public Class frmMileageTrackerNewEntry
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
     End Sub
+
+    Private Sub txtBeginOdometer_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtBeginOdometer.KeyPress
+        If Char.IsDigit(e.KeyChar) = False And Char.IsControl(e.KeyChar) = False Then
+            e.Handled = True
+        End If
+    End Sub
+
+    Private Sub txtEndOdometer_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEndOdometer.KeyPress
+        If Char.IsDigit(e.KeyChar) = False And Char.IsControl(e.KeyChar) = False Then
+            e.Handled = True
+        End If
+    End Sub
 End Class

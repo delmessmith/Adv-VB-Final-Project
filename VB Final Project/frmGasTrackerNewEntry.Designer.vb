@@ -31,11 +31,11 @@ Partial Class frmGasTrackerNewEntry
         Me.cboEmployee = New System.Windows.Forms.ComboBox()
         Me.cboVehicle = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtPurchaseAmnt = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtGasStation = New System.Windows.Forms.TextBox()
         Me.txtReceiptNumber = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtPurchaseAmnt = New System.Windows.Forms.MaskedTextBox()
         Me.SuspendLayout()
         '
         'btnAdd
@@ -117,13 +117,6 @@ Partial Class frmGasTrackerNewEntry
         Me.Label4.TabIndex = 8
         Me.Label4.Text = "Purchase Amount:"
         '
-        'txtPurchaseAmnt
-        '
-        Me.txtPurchaseAmnt.Location = New System.Drawing.Point(126, 103)
-        Me.txtPurchaseAmnt.Name = "txtPurchaseAmnt"
-        Me.txtPurchaseAmnt.Size = New System.Drawing.Size(121, 20)
-        Me.txtPurchaseAmnt.TabIndex = 9
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -156,16 +149,24 @@ Partial Class frmGasTrackerNewEntry
         Me.Label6.TabIndex = 13
         Me.Label6.Text = "Receipt Number:"
         '
+        'txtPurchaseAmnt
+        '
+        Me.txtPurchaseAmnt.Location = New System.Drawing.Point(126, 103)
+        Me.txtPurchaseAmnt.Mask = "000.00"
+        Me.txtPurchaseAmnt.Name = "txtPurchaseAmnt"
+        Me.txtPurchaseAmnt.Size = New System.Drawing.Size(121, 20)
+        Me.txtPurchaseAmnt.TabIndex = 14
+        '
         'frmGasTrackerNewEntry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(266, 244)
+        Me.Controls.Add(Me.txtPurchaseAmnt)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtReceiptNumber)
         Me.Controls.Add(Me.txtGasStation)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txtPurchaseAmnt)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.cboVehicle)
         Me.Controls.Add(Me.cboEmployee)
@@ -191,9 +192,9 @@ Partial Class frmGasTrackerNewEntry
     Friend WithEvents cboEmployee As ComboBox
     Friend WithEvents cboVehicle As ComboBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtPurchaseAmnt As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtGasStation As TextBox
     Friend WithEvents txtReceiptNumber As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents txtPurchaseAmnt As MaskedTextBox
 End Class
