@@ -27,22 +27,22 @@ Partial Class frmMileageTrackerViewAll
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFileClose = New System.Windows.Forms.ToolStripMenuItem()
         Me.dgvMilesDriven = New System.Windows.Forms.DataGridView()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.GasPurchasesDataSet = New VB_Final_Project.GasPurchasesDataSet()
-        Me.MilesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.MilesTableAdapter = New VB_Final_Project.GasPurchasesDataSetTableAdapters.MilesTableAdapter()
         Me.EmployeeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.VehicleDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BeginOdometerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.EndOdometerDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MilesDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MilesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.GasPurchasesDataSet = New VB_Final_Project.GasPurchasesDataSet()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.lblStatus = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.MilesTableAdapter = New VB_Final_Project.GasPurchasesDataSetTableAdapters.MilesTableAdapter()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvMilesDriven, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.StatusStrip1.SuspendLayout()
-        CType(Me.GasPurchasesDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MilesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GasPurchasesDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -64,11 +64,13 @@ Partial Class frmMileageTrackerViewAll
         'mnuFileClose
         '
         Me.mnuFileClose.Name = "mnuFileClose"
-        Me.mnuFileClose.Size = New System.Drawing.Size(103, 22)
+        Me.mnuFileClose.Size = New System.Drawing.Size(152, 22)
         Me.mnuFileClose.Text = "Close"
         '
         'dgvMilesDriven
         '
+        Me.dgvMilesDriven.AllowUserToAddRows = False
+        Me.dgvMilesDriven.AllowUserToDeleteRows = False
         Me.dgvMilesDriven.AutoGenerateColumns = False
         Me.dgvMilesDriven.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvMilesDriven.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.EmployeeDataGridViewTextBoxColumn, Me.VehicleDataGridViewTextBoxColumn, Me.DateDataGridViewTextBoxColumn, Me.BeginOdometerDataGridViewTextBoxColumn, Me.EndOdometerDataGridViewTextBoxColumn, Me.MilesDataGridViewTextBoxColumn})
@@ -76,36 +78,9 @@ Partial Class frmMileageTrackerViewAll
         Me.dgvMilesDriven.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvMilesDriven.Location = New System.Drawing.Point(0, 24)
         Me.dgvMilesDriven.Name = "dgvMilesDriven"
+        Me.dgvMilesDriven.ReadOnly = True
         Me.dgvMilesDriven.Size = New System.Drawing.Size(642, 262)
         Me.dgvMilesDriven.TabIndex = 3
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStatus})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 264)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(642, 22)
-        Me.StatusStrip1.TabIndex = 4
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'lblStatus
-        '
-        Me.lblStatus.Name = "lblStatus"
-        Me.lblStatus.Size = New System.Drawing.Size(0, 17)
-        '
-        'GasPurchasesDataSet
-        '
-        Me.GasPurchasesDataSet.DataSetName = "GasPurchasesDataSet"
-        Me.GasPurchasesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'MilesBindingSource
-        '
-        Me.MilesBindingSource.DataMember = "Miles"
-        Me.MilesBindingSource.DataSource = Me.GasPurchasesDataSet
-        '
-        'MilesTableAdapter
-        '
-        Me.MilesTableAdapter.ClearBeforeFill = True
         '
         'EmployeeDataGridViewTextBoxColumn
         '
@@ -143,6 +118,34 @@ Partial Class frmMileageTrackerViewAll
         Me.MilesDataGridViewTextBoxColumn.HeaderText = "Miles"
         Me.MilesDataGridViewTextBoxColumn.Name = "MilesDataGridViewTextBoxColumn"
         '
+        'MilesBindingSource
+        '
+        Me.MilesBindingSource.DataMember = "Miles"
+        Me.MilesBindingSource.DataSource = Me.GasPurchasesDataSet
+        '
+        'GasPurchasesDataSet
+        '
+        Me.GasPurchasesDataSet.DataSetName = "GasPurchasesDataSet"
+        Me.GasPurchasesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStatus})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 264)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(642, 22)
+        Me.StatusStrip1.TabIndex = 4
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'lblStatus
+        '
+        Me.lblStatus.Name = "lblStatus"
+        Me.lblStatus.Size = New System.Drawing.Size(0, 17)
+        '
+        'MilesTableAdapter
+        '
+        Me.MilesTableAdapter.ClearBeforeFill = True
+        '
         'frmMileageTrackerViewAll
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -156,10 +159,10 @@ Partial Class frmMileageTrackerViewAll
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.dgvMilesDriven, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MilesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GasPurchasesDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
-        CType(Me.GasPurchasesDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MilesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

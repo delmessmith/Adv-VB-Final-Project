@@ -31,6 +31,7 @@ Partial Class frmMileageReport
         Me.sfdSave = New System.Windows.Forms.SaveFileDialog()
         Me.dgvDisplay = New System.Windows.Forms.DataGridView()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.dgvDisplay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,7 +39,7 @@ Partial Class frmMileageReport
         '
         Me.dtpBegin.CustomFormat = "MM/ 1/yyyy"
         Me.dtpBegin.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.dtpBegin.Location = New System.Drawing.Point(15, 44)
+        Me.dtpBegin.Location = New System.Drawing.Point(12, 25)
         Me.dtpBegin.Name = "dtpBegin"
         Me.dtpBegin.Size = New System.Drawing.Size(82, 20)
         Me.dtpBegin.TabIndex = 1
@@ -47,7 +48,7 @@ Partial Class frmMileageReport
         'dtpEnd
         '
         Me.dtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpEnd.Location = New System.Drawing.Point(145, 44)
+        Me.dtpEnd.Location = New System.Drawing.Point(122, 25)
         Me.dtpEnd.Name = "dtpEnd"
         Me.dtpEnd.Size = New System.Drawing.Size(92, 20)
         Me.dtpEnd.TabIndex = 2
@@ -72,7 +73,7 @@ Partial Class frmMileageReport
         '
         'btnRun
         '
-        Me.btnRun.Location = New System.Drawing.Point(15, 99)
+        Me.btnRun.Location = New System.Drawing.Point(12, 66)
         Me.btnRun.Name = "btnRun"
         Me.btnRun.Size = New System.Drawing.Size(75, 23)
         Me.btnRun.TabIndex = 5
@@ -81,7 +82,7 @@ Partial Class frmMileageReport
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(229, 99)
+        Me.btnCancel.Location = New System.Drawing.Point(226, 66)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 6
@@ -95,20 +96,33 @@ Partial Class frmMileageReport
         '
         'dgvDisplay
         '
+        Me.dgvDisplay.AllowUserToAddRows = False
+        Me.dgvDisplay.AllowUserToDeleteRows = False
         Me.dgvDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvDisplay.Location = New System.Drawing.Point(12, 141)
+        Me.dgvDisplay.Location = New System.Drawing.Point(12, 151)
         Me.dgvDisplay.Name = "dgvDisplay"
-        Me.dgvDisplay.Size = New System.Drawing.Size(706, 150)
+        Me.dgvDisplay.ReadOnly = True
+        Me.dgvDisplay.Size = New System.Drawing.Size(706, 140)
         Me.dgvDisplay.TabIndex = 7
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(122, 99)
+        Me.btnSave.Location = New System.Drawing.Point(119, 66)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(75, 23)
         Me.btnSave.TabIndex = 8
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(284, 124)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(148, 24)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "Report Sample"
         '
         'frmMileageReport
         '
@@ -116,6 +130,7 @@ Partial Class frmMileageReport
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(741, 302)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.dgvDisplay)
         Me.Controls.Add(Me.btnCancel)
@@ -141,4 +156,5 @@ Partial Class frmMileageReport
     Friend WithEvents sfdSave As SaveFileDialog
     Friend WithEvents dgvDisplay As DataGridView
     Friend WithEvents btnSave As Button
+    Friend WithEvents Label3 As Label
 End Class
