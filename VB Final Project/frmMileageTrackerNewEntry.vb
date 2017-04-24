@@ -11,14 +11,15 @@ Public Class frmMileageTrackerNewEntry
         Dim miles As Integer = endOdom - beginOdom
 
         If mMilesEntry.Insert(employee, vehicle, entryDate, beginOdom, endOdom, miles) Then
+            If chkGasPurchase.Checked Then
+                frmGasTrackerNewEntry.ShowDialog()
+            End If
             Me.Close()
         Else
             MessageBox.Show("Cannot Add Appointment. " & MileageEntry.LastError)
         End If
 
-        If chkGasPurchase.Checked Then
-            frmGasTrackerNewEntry.ShowDialog()
-        End If
+
 
         Me.Close()
     End Sub
@@ -29,7 +30,7 @@ Public Class frmMileageTrackerNewEntry
         txtBeginOdometer.Text = ""
         txtEndOdometer.Text = ""
         cboEmployee.Text = Username
-        cboVehicle.Text = ""
+        cboVehicle.SelectedIndex = 0
         chkGasPurchase.Checked = False
         dtpDate.Text = Today
 

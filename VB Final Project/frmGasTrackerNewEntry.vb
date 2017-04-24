@@ -4,13 +4,23 @@ Option Explicit On
 
 Imports System.IO
 Public Class frmGasTrackerNewEntry
+    Private mGasEntry As New GasEntry
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         Me.Close()
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        MessageBox.Show("Successfully Added to Database")
-        Me.Close()
+        Dim employee As String = Username
+        Dim vehicle As String = cboVehicle.Text
+        Dim entryDate As Date = CDate(dtpDate.Value)
+        Dim purchaseAmnt As Double = CDbl(txtPurchaseAmnt.Text)
+        Dim gasStation As String = txtGasStation.Text
+        Dim receiptNumber As String = txtReceiptNumber.Text
+
+
+        If mGasEntry.Insert(employee, vehicle, entryDate, purchaseAmnt, gasStation, receiptNumber) Then
+            Me.Close()
+        End If
     End Sub
 
     Private Sub frmGasTrackerNewEntry_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -19,8 +29,9 @@ Public Class frmGasTrackerNewEntry
         txtGasStation.Text = ""
         txtReceiptNumber.Text = ""
         cboEmployee.Text = Username
-        cboVehicle.Text = ""
+        cboVehicle.SelectedIndex = 0
         dtpDate.Text = Today.ToString
+
     End Sub
 
     Private Sub txtPurchaseAmnt_KeyPress(sender As Object, e As KeyPressEventArgs)

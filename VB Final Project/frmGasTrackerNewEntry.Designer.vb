@@ -103,6 +103,7 @@ Partial Class frmGasTrackerNewEntry
         'cboVehicle
         '
         Me.cboVehicle.FormattingEnabled = True
+        Me.cboVehicle.Items.AddRange(New Object() {"GMC", "Ford"})
         Me.cboVehicle.Location = New System.Drawing.Point(126, 50)
         Me.cboVehicle.Name = "cboVehicle"
         Me.cboVehicle.Size = New System.Drawing.Size(121, 21)
