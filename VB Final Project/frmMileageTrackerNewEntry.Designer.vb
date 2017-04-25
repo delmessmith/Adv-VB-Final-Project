@@ -42,7 +42,7 @@ Partial Class frmMileageTrackerNewEntry
         Me.txtEndOdometer.Location = New System.Drawing.Point(126, 129)
         Me.txtEndOdometer.Name = "txtEndOdometer"
         Me.txtEndOdometer.Size = New System.Drawing.Size(121, 20)
-        Me.txtEndOdometer.TabIndex = 25
+        Me.txtEndOdometer.TabIndex = 4
         '
         'Label5
         '
@@ -58,7 +58,7 @@ Partial Class frmMileageTrackerNewEntry
         Me.txtBeginOdometer.Location = New System.Drawing.Point(126, 103)
         Me.txtBeginOdometer.Name = "txtBeginOdometer"
         Me.txtBeginOdometer.Size = New System.Drawing.Size(121, 20)
-        Me.txtBeginOdometer.TabIndex = 23
+        Me.txtBeginOdometer.TabIndex = 3
         '
         'Label4
         '
@@ -76,7 +76,7 @@ Partial Class frmMileageTrackerNewEntry
         Me.cboVehicle.Location = New System.Drawing.Point(126, 50)
         Me.cboVehicle.Name = "cboVehicle"
         Me.cboVehicle.Size = New System.Drawing.Size(121, 21)
-        Me.cboVehicle.TabIndex = 21
+        Me.cboVehicle.TabIndex = 1
         '
         'cboEmployee
         '
@@ -85,7 +85,7 @@ Partial Class frmMileageTrackerNewEntry
         Me.cboEmployee.Location = New System.Drawing.Point(126, 21)
         Me.cboEmployee.Name = "cboEmployee"
         Me.cboEmployee.Size = New System.Drawing.Size(121, 21)
-        Me.cboEmployee.TabIndex = 20
+        Me.cboEmployee.TabIndex = 0
         '
         'Label3
         '
@@ -120,14 +120,14 @@ Partial Class frmMileageTrackerNewEntry
         Me.dtpDate.Location = New System.Drawing.Point(126, 77)
         Me.dtpDate.Name = "dtpDate"
         Me.dtpDate.Size = New System.Drawing.Size(121, 20)
-        Me.dtpDate.TabIndex = 16
+        Me.dtpDate.TabIndex = 2
         '
         'btnClose
         '
         Me.btnClose.Location = New System.Drawing.Point(129, 203)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(75, 23)
-        Me.btnClose.TabIndex = 15
+        Me.btnClose.TabIndex = 7
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
@@ -136,7 +136,7 @@ Partial Class frmMileageTrackerNewEntry
         Me.btnAdd.Location = New System.Drawing.Point(48, 203)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
-        Me.btnAdd.TabIndex = 14
+        Me.btnAdd.TabIndex = 6
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
@@ -146,14 +146,16 @@ Partial Class frmMileageTrackerNewEntry
         Me.chkGasPurchase.Location = New System.Drawing.Point(15, 164)
         Me.chkGasPurchase.Name = "chkGasPurchase"
         Me.chkGasPurchase.Size = New System.Drawing.Size(132, 17)
-        Me.chkGasPurchase.TabIndex = 26
+        Me.chkGasPurchase.TabIndex = 5
         Me.chkGasPurchase.Text = "Gas Purchased Today"
         Me.chkGasPurchase.UseVisualStyleBackColor = True
         '
         'frmMileageTrackerNewEntry
         '
+        Me.AcceptButton = Me.btnAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(259, 261)
         Me.Controls.Add(Me.chkGasPurchase)
         Me.Controls.Add(Me.txtEndOdometer)

@@ -6,8 +6,21 @@ Public Class frmMileageTrackerNewEntry
         Dim employee As String = Username
         Dim vehicle As String = cboVehicle.Text
         Dim entryDate As Date = CDate(dtpDate.Value)
-        Dim beginOdom As Integer = CInt(txtBeginOdometer.Text)
-        Dim endOdom As Integer = CInt(txtEndOdometer.Text)
+        Dim beginOdom As Integer
+        If txtBeginOdometer.Text = "" Then
+            MessageBox.Show("Please enter a valid Beginning Odometer value")
+            Return
+        Else
+            beginOdom = CInt(txtBeginOdometer.Text)
+        End If
+
+        Dim endOdom As Integer
+        If txtEndOdometer.Text = "" Then
+            MessageBox.Show("Please enter a valid Ending Odometer value")
+            Return
+        Else
+            endOdom = CInt(txtEndOdometer.Text)
+        End If
         Dim miles As Integer = endOdom - beginOdom
 
         If mMilesEntry.Insert(employee, vehicle, entryDate, beginOdom, endOdom, miles) Then

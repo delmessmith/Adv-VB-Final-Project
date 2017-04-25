@@ -43,7 +43,7 @@ Partial Class frmGasTrackerNewEntry
         Me.btnAdd.Location = New System.Drawing.Point(42, 202)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
-        Me.btnAdd.TabIndex = 0
+        Me.btnAdd.TabIndex = 6
         Me.btnAdd.Text = "Add"
         Me.btnAdd.UseVisualStyleBackColor = True
         '
@@ -52,7 +52,7 @@ Partial Class frmGasTrackerNewEntry
         Me.btnClose.Location = New System.Drawing.Point(123, 202)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(75, 23)
-        Me.btnClose.TabIndex = 1
+        Me.btnClose.TabIndex = 7
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
@@ -98,7 +98,7 @@ Partial Class frmGasTrackerNewEntry
         Me.cboEmployee.Location = New System.Drawing.Point(126, 21)
         Me.cboEmployee.Name = "cboEmployee"
         Me.cboEmployee.Size = New System.Drawing.Size(121, 21)
-        Me.cboEmployee.TabIndex = 6
+        Me.cboEmployee.TabIndex = 0
         '
         'cboVehicle
         '
@@ -107,7 +107,7 @@ Partial Class frmGasTrackerNewEntry
         Me.cboVehicle.Location = New System.Drawing.Point(126, 50)
         Me.cboVehicle.Name = "cboVehicle"
         Me.cboVehicle.Size = New System.Drawing.Size(121, 21)
-        Me.cboVehicle.TabIndex = 7
+        Me.cboVehicle.TabIndex = 1
         '
         'Label4
         '
@@ -132,14 +132,14 @@ Partial Class frmGasTrackerNewEntry
         Me.txtGasStation.Location = New System.Drawing.Point(126, 129)
         Me.txtGasStation.Name = "txtGasStation"
         Me.txtGasStation.Size = New System.Drawing.Size(121, 20)
-        Me.txtGasStation.TabIndex = 11
+        Me.txtGasStation.TabIndex = 4
         '
         'txtReceiptNumber
         '
         Me.txtReceiptNumber.Location = New System.Drawing.Point(126, 156)
         Me.txtReceiptNumber.Name = "txtReceiptNumber"
         Me.txtReceiptNumber.Size = New System.Drawing.Size(121, 20)
-        Me.txtReceiptNumber.TabIndex = 12
+        Me.txtReceiptNumber.TabIndex = 5
         '
         'Label6
         '
@@ -156,12 +156,14 @@ Partial Class frmGasTrackerNewEntry
         Me.txtPurchaseAmnt.Mask = "000.00"
         Me.txtPurchaseAmnt.Name = "txtPurchaseAmnt"
         Me.txtPurchaseAmnt.Size = New System.Drawing.Size(121, 20)
-        Me.txtPurchaseAmnt.TabIndex = 14
+        Me.txtPurchaseAmnt.TabIndex = 3
         '
         'frmGasTrackerNewEntry
         '
+        Me.AcceptButton = Me.btnAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(266, 244)
         Me.Controls.Add(Me.txtPurchaseAmnt)
         Me.Controls.Add(Me.Label6)

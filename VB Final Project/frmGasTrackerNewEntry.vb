@@ -45,7 +45,7 @@ Public Class frmGasTrackerNewEntry
     End Sub
 
     Private Sub frmGasTrackerNewEntry_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Housekeeping to clear any values
+        'Housekeeping to clear any values from the form
         txtPurchaseAmnt.Text = ""
         txtGasStation.Text = ""
         txtReceiptNumber.Text = ""
