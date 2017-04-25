@@ -22,6 +22,7 @@ Partial Class frmAbout
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAbout))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.mnuFile = New System.Windows.Forms.ToolStripMenuItem()
@@ -32,11 +33,11 @@ Partial Class frmAbout
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(98, 85)
+        Me.Label1.Location = New System.Drawing.Point(12, 35)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(203, 13)
+        Me.Label1.Size = New System.Drawing.Size(397, 52)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Blah Blah Blah Placeholder Company Info"
+        Me.Label1.Text = resources.GetString("Label1.Text")
         '
         'MenuStrip1
         '
@@ -57,14 +58,14 @@ Partial Class frmAbout
         'mnuFileClose
         '
         Me.mnuFileClose.Name = "mnuFileClose"
-        Me.mnuFileClose.Size = New System.Drawing.Size(152, 22)
+        Me.mnuFileClose.Size = New System.Drawing.Size(103, 22)
         Me.mnuFileClose.Text = "Close"
         '
         'frmAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(433, 261)
+        Me.ClientSize = New System.Drawing.Size(433, 113)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "frmAbout"
