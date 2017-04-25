@@ -18,10 +18,6 @@ Public Class frmMileageTrackerNewEntry
         Else
             MessageBox.Show("Cannot Add Appointment. " & MileageEntry.LastError)
         End If
-
-
-
-        Me.Close()
     End Sub
 
     Private Sub frmMileageTrackerNewEntry_Load(sender As Object, e As EventArgs) Handles MyBase.Load

@@ -13,13 +13,34 @@ Public Class frmGasTrackerNewEntry
         Dim employee As String = Username
         Dim vehicle As String = cboVehicle.Text
         Dim entryDate As Date = CDate(dtpDate.Value)
-        Dim purchaseAmnt As Double = CDbl(txtPurchaseAmnt.Text)
-        Dim gasStation As String = txtGasStation.Text
-        Dim receiptNumber As String = txtReceiptNumber.Text
+        Dim purchaseAmnt As Double
+        If txtPurchaseAmnt.Text = "   ." Then
+            MessageBox.Show("Please enter a valid Purchase Amount")
+            Return
+        Else
+            purchaseAmnt = CDbl(txtPurchaseAmnt.Text)
+        End If
 
+        Dim gasStation As String
+        If txtGasStation.Text = "" Then
+            MessageBox.Show("Please enter a valid Gas Station")
+            Return
+        Else
+            gasStation = txtGasStation.Text
+        End If
+
+        Dim receiptNumber As String
+        If txtReceiptNumber.Text = "" Then
+            MessageBox.Show("Please enter a valid Receipt Number")
+            Return
+        Else
+            receiptNumber = txtReceiptNumber.Text
+        End If
 
         If mGasEntry.Insert(employee, vehicle, entryDate, purchaseAmnt, gasStation, receiptNumber) Then
             Me.Close()
+        Else
+            MessageBox.Show("Cannot Add Appointment. " & GasEntry.LastError)
         End If
     End Sub
 
