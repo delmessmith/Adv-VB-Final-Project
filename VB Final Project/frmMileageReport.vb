@@ -21,8 +21,6 @@ Public Class frmMileageReport
             dgvDisplay.DataSource = mMileageEntries.GetByDate(beginDate, endDate)
             reportRan = True
         End If
-
-
     End Sub
 
     Private Sub dtpBegin_ValueChanged(sender As Object, e As EventArgs) Handles dtpBegin.ValueChanged
